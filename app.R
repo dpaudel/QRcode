@@ -35,7 +35,7 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   # Reactive expression to generate QR code when button is pressed
   qr_code_data <- eventReactive(input$generate, {
-    req(input$url)  # Ensure input is available
+    req(input$url)  # Ensure input URL is available 
     # Generate QR code
     qr_code(input$url)
   })
